@@ -86,6 +86,7 @@ a {
 }
 
 .nav-link {
+  position: relative;
   display: block;
   padding: 24px 0;
   font-weight: 500;
@@ -97,11 +98,7 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link.current {
-  position: relative;
-}
-
-.nav-link.current::after {
+.nav-link::after {
   content: "";
 
   position: absolute;
@@ -113,6 +110,16 @@ a {
   border-radius: 2px;
 
   background-color: #404bbf;
+
+  opacity: 0;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.current::after {
+  opacity: 1;
 }
 
 .contacts {
@@ -146,14 +153,26 @@ a {
 }
 
 /*Effective Solutions for Your Business
-Order Service*/
+Order Service <!--section 1-->*/
 
 .title-section {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
   height: 600px;
   background-color: #2e2f42;
 }
+
 .main-heading {
   max-width: 496px;
   padding-bottom: 48px;
@@ -163,7 +182,6 @@ Order Service*/
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  background-color: #2e2f42;
 }
 
 .button-title {
@@ -181,6 +199,7 @@ Order Service*/
   cursor: pointer;
   color: #fff;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-title:hover,
@@ -188,7 +207,7 @@ Order Service*/
   background-color: #404bbf;
 }
 
-/*Strategy end next*/
+/*Strategy end next <!--section 2-->*/
 
 .paragraph-section {
   padding-top: 120px;
@@ -233,7 +252,7 @@ Order Service*/
   color: #434455;
 }
 
-/*our team*/
+/*our team <!--section 3-->*/
 
 .section-title {
   padding-top: 120px;
@@ -287,7 +306,7 @@ Order Service*/
   color: #434455;
 }
 
-/*Our Portfolio*/
+/*Our Portfolio <!--section 4-->*/
 
 .section-portfolio {
   padding-top: 120px;
