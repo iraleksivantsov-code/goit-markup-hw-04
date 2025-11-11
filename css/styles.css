@@ -474,7 +474,24 @@ Order Service <!--section 1-->*/
 .media-list {
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .media-icon {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-icon:hover,
+.media-icon:focus {
+  background-color: #31d0aa;
+}
+
+.networks-footer {
+  fill: #f4f4fd;
 }
