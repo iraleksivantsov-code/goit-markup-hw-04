@@ -520,5 +520,5 @@ Order Service <!--section 1-->*/
 }
 
 .container-flex {
-  margin-right: 120px;
+  display: flex;
 }
